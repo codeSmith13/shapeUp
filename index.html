@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Shape Up or Shape Out</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    </head>
+    <body class="bg-dark">
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="header"><h1>Add a Shape</h1></div>
+<div id="btns" class="row g-3 m-5 justify-content-center ">
+ <button id="rectBtn" class="btn btn-primary col-1 m-1 ">Rectangle</button>
+  <input id="rectInput1" class="col-1 m-1" type="text" placeholder="Height PX:">
+  <input id="rectInput2" class="col-1 m-1" type="text" placeholder="Width PX:">
+  <button id="squareBtn" class="btn btn-primary col-1 m-1">Square</button>
+  <input id="sqHeightInput"class="col-1 m-1" type="text" placeholder="Height PX:">
+  <button id="cirBtn" class="btn btn-primary col-1 m-1">Circle</button>
+  <input id="cirRadInput" class="col-1 m-1" type="text" placeholder="Radius PX:">
+  <button id="isoBtn"  class="btn btn-primary col-1 m-1">Isoceles</button>
+  <input id="IsoHeightInput" class="col-1 m-1" type="text" placeholder="Height PX:">
+</div>
+
+<div class='mainContainer row justify-content-center'>
+<div id="shapeContainer" class="shapeContainer col-6"></div>
+ 
+<div class="infoContainer col-3 justify-content-center">
+    <h2>Shape Info</h2>
+    <div id="shapeInfo" class="infoBox1"> Shape:</div>
+    <div id="widthInfo" class="infoBox2"> Width:</div>
+    <div id="heightInfo" class="infoBox3">Height:</div>
+    <div id="radiusInfo" class="infoBox4">Radius:</div>
+    <div id="areaInfo" class="infoBox5">Area:</div>
+    <div id="perimeterInfo"  class="infoBox6">Perimeter:</div>
+</div>
+</div>
+        
+        <script src="app.js" async defer></script>
+       </body>
+</html>

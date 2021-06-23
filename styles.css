@@ -1,0 +1,128 @@
+body{
+    position:absolute;
+}
+   
+
+
+.header{
+    
+    color: white;
+    text-align: center;
+}
+
+.shapeContainer{
+    height: 600px;
+    width: 600px;
+    background-color: white;
+    margin: 0.5em;
+    border: 2px solid black;
+   position: relative;
+   overflow: hidden;
+  
+}
+.infoContainer{
+    background-color: rgb(240, 71, 48);
+    height: 400px;
+    width: 200px;
+   margin: 0.5em;
+   border: solid 2px black;
+  position: relative;
+
+}
+
+.mainContainer{
+ display:flex;
+ display: wrap;
+ justify-content: center;
+align-items: center;
+
+}
+
+.infoBox1{
+    background-color: white;
+    border: solid 2px black;
+    margin: 1em;
+    font-weight: bold;
+    padding: 3px;
+    position: relative;
+    color: black;
+}
+
+.infoBox2{
+    background-color: white;
+    border: solid 2px black;
+    margin: 1em;
+    font-weight: bold;
+    padding: 3px;
+    position: relative;
+    color: black;
+}
+
+.infoBox3{
+    background-color: white;
+    border: solid 2px black;
+    margin: 1em;
+    font-weight: bold;
+    padding: 3px;
+    position: relative;
+    color: black;
+}
+
+.infoBox4{
+    background-color: white;
+    border: solid 2px black;
+    margin: 1em;
+    font-weight: bold;
+    padding: 3px;
+    position: relative;
+    color: black;
+}
+
+.infoBox5{
+    background-color: white;
+    border: solid 2px black;
+    margin: 1em;
+    font-weight: bold;
+    padding: 3px;
+    position: relative;
+    color: black;
+}
+
+.infoBox6{
+    background-color: white;
+    border: solid 2px black;
+    margin: 1em;
+    font-weight: bold;
+    padding: 3px;
+    position: relative;
+    color: black;
+}
+h2{
+    text-align: center;
+    font-weight: bold;
+    padding: .5em;
+}
+
+#btns{
+    display: flex;
+    flex-wrap: wrap;
+position: relative;
+}
+.btn{
+    overflow: hidden;
+    min-width: 25px;
+}
+.shape{
+    position:absolute;
+    overflow: hidden;
+    
+}
+.circle{
+     position:absolute;
+    overflow: hidden;
+    border-radius: 50%;
+}
+    .triangle{
+     
+
+    }
