@@ -1,5 +1,6 @@
 body{
     position:absolute;
+    margin: auto 0;
 }
    
 
@@ -18,15 +19,21 @@ body{
     border: 2px solid black;
    position: relative;
    overflow: hidden;
+   box-shadow:  white 1px 1px 10px;
+   
+  
+
   
 }
 .infoContainer{
+    justify-content: center;
     background-color: rgb(240, 71, 48);
-    height: 400px;
-    width: 200px;
-   margin: 0.5em;
+    margin: 0.5em;
    border: solid 2px black;
   position: relative;
+  box-shadow:  white 1px 1px 10px;
+  padding: 2em;
+  
 
 }
 
@@ -36,9 +43,11 @@ body{
  justify-content: center;
 align-items: center;
 
-}
 
-.infoBox1{
+
+ } 
+
+.infoBox{
     background-color: white;
     border: solid 2px black;
     margin: 1em;
@@ -46,83 +55,83 @@ align-items: center;
     padding: 3px;
     position: relative;
     color: black;
+    display:flex;
+    
+    
+    
 }
 
-.infoBox2{
-    background-color: white;
-    border: solid 2px black;
-    margin: 1em;
-    font-weight: bold;
-    padding: 3px;
-    position: relative;
-    color: black;
-}
-
-.infoBox3{
-    background-color: white;
-    border: solid 2px black;
-    margin: 1em;
-    font-weight: bold;
-    padding: 3px;
-    position: relative;
-    color: black;
-}
-
-.infoBox4{
-    background-color: white;
-    border: solid 2px black;
-    margin: 1em;
-    font-weight: bold;
-    padding: 3px;
-    position: relative;
-    color: black;
-}
-
-.infoBox5{
-    background-color: white;
-    border: solid 2px black;
-    margin: 1em;
-    font-weight: bold;
-    padding: 3px;
-    position: relative;
-    color: black;
-}
-
-.infoBox6{
-    background-color: white;
-    border: solid 2px black;
-    margin: 1em;
-    font-weight: bold;
-    padding: 3px;
-    position: relative;
-    color: black;
-}
-h2{
+#h2{
     text-align: center;
-    font-weight: bold;
     padding: .5em;
+    font-family: 'Dela Gothic One', cursive; ;
+    font-weight: bold;
+    color: white;
+    
 }
 
-#btns{
-    display: flex;
-    flex-wrap: wrap;
-position: relative;
+#h1{
+    text-align: center;
+    padding: .5em;
+    font-family: 'Dela Gothic One', cursive; ;
+    font-weight: bold;
+    color: white;
 }
-.btn{
-    overflow: hidden;
-    min-width: 25px;
-}
+
 .shape{
     position:absolute;
     overflow: hidden;
     
 }
+
 .circle{
      position:absolute;
     overflow: hidden;
     border-radius: 50%;
 }
-    .triangle{
-     
+   
+#info1{
+    
+    display: inline;
+    font-weight: normal;
+}
+#info2{
+    font-weight: normal;
+    display: inline;
 
-    }
+}
+#info3{
+    font-weight: normal;
+    display: inline;
+}
+#info4{
+    font-weight: normal;
+    display: inline;
+}
+#info5{
+    font-weight: normal;
+    display: inline;
+}
+#info6{
+    font-weight: normal;
+    display: inline;
+}
+
+
+button{
+font-family: Helvetica;
+background:  rgb(2, 120, 255);
+font-weight: bold;
+color:white;
+
+}
+
+button:hover {
+  ;
+  
+  text-transform: uppercase;
+  box-shadow: rgb(255, 255, 255) 1px 1px 5px 1px;
+}
+button:active {
+  background: rgb(255, 104, 34);
+} 

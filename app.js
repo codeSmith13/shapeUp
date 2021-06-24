@@ -32,7 +32,7 @@ let randomColor = () => "#" + Math.floor(Math.random() * 16777215).toString(16);
 rectBtn.addEventListener("click", (e) => new Rectangle());
 squareBtn.addEventListener("click", (e) => new Square());
 cirBtn.addEventListener("click", (e) => new Circle());
-isoBtn.addEventListener("click", (e) => new Triangle ());
+isoBtn.addEventListener("click", (e) => new Triangle());
 
 class Shape {
   constructor() {
@@ -43,12 +43,13 @@ class Shape {
     this.describe();
   }
   randomNum() {
-    this.div.style.left = `${Math.floor(Math.random() * 600)}px`;
-    this.div.style.top = `${Math.floor(Math.random() * 600)}px`;
+    this.div.style.left = `${Math.floor(Math.random() * 601)}px`;
+    this.div.style.top = `${Math.floor(Math.random() * 601)}px`;
   }
-
- 
+  
+  
 }
+
         
         
     
@@ -65,19 +66,18 @@ class Rectangle extends Shape {
     
   }
   describe() {
-    shapeInfo.innerText = "Rectangle";
-    heightInfo.innerText = `${rectInput1.value}px`;
-    widthInfo.innerText = `${rectInput2.value}px`;
-    radiusInfo.innerText = "NA";
-    areaInfo.innerText =`${Math.floor( `${rectInput1.value}` * `${rectInput2.value}`)} px`;
-    perimeterInfo.innerText = `${Math.floor(`${rectInput1.value}` * `${rectInput2.value}`*2)} px`;
+    info1.innerText = "Rectangle";
+    info2.innerText = `${rectInput2.value}px`;
+    info3.innerText = `${rectInput1.value}px`;
+    info4.innerText = "NA";
+    info5.innerText =`${Math.floor( `${rectInput1.value}` * `${rectInput2.value}`)} px`;
+    info6.innerText = `${Math.floor(`${rectInput1.value}` * `${rectInput2.value}`*2)} px`;
   }
 }
 
 class Square extends Shape {
   constructor() {
     super();
-    this.div.id = "Square";
     this.div.style.height = `${sqHeightInput.value}px`;
     this.div.style.width = `${sqHeightInput.value}px`;
     this.div.style.backgroundColor = randomColor();
@@ -85,47 +85,60 @@ class Square extends Shape {
     shapeContainer.appendChild(this.div);
   }
   describe() {
-    shapeInfo.innerText = "Square";
-    heightInfo.innerText = `${sqHeightInput.value}px`;
-    widthInfo.innerText = `${sqHeightInput.value}px`;
-    radiusInfo.innerText = "NA";
-    areaInfo.innerText = `${Math.floor(`${sqHeightInput.value}` * `${sqHeightInput.value}`)} px`;
-    perimeterInfo.innerText = `${Math.floor(`${sqHeightInput.value}` * `${sqHeightInput.value}` * 2)} px`;
+    info1.innerText = "Square";
+    info3.innerText = `${sqHeightInput.value}px`;
+    info2.innerText = `${sqHeightInput.value}px`;
+    info4.innerText = "NA";
+    info5.innerText = `${Math.floor(
+      `${sqHeightInput.value}` * `${sqHeightInput.value}`
+    )} px`;
+    info6.innerText = `${Math.floor(
+      `${sqHeightInput.value}` * `${sqHeightInput.value}` * 2
+    )} px`;
   }
 }
 
 class Circle extends Shape {
   constructor() {
     super();
-    this.div.id = "Circle";
     this.div.style.height = `${cirRadInput.value}px`;
     this.div.style.width = `${cirRadInput.value}px`;
     this.div.style.backgroundColor = randomColor();
-    this.randomNum();
     this.div.classList.add("circle");
+    this.randomNum();
     shapeContainer.appendChild(this.div);
   }
   describe() {
-    shapeInfo.innerText = "Square";
-    heightInfo.innerText = `${cirRadInput.value}px`;
-    widthInfo.innerText = `${cirRadInput.value}px`;
-    radiusInfo.innerText = "NA";
-    areaInfo.innerText = `${Math.floor(`${cirRadInput.value}` * `${cirRadInput.value}`)} px`;
-    perimeterInfo.innerText = `${Math.floor(`${cirRadInput.value}` * `${cirRadInput.value}` * 2)} px`;
+    info1.innerText = "Circle";
+    info3.innerText = `${cirRadInput.value}px`;
+    info2.innerText = `${cirRadInput.value}px`;
+    info4.innerText = `${cirRadInput.value}px`;
+    info5.innerText = `${Math.PI * Math.pow(cirRadInput.value, 2)}px`;
+    info6.innerText = `${Math.floor(`${cirRadInput.value}` * `${cirRadInput.value}` * 2)} px`;
   }
 }
 
 class Triangle extends Shape {
   constructor() {
     super();
-    this.div.id = "Triangle";
-    this.div.style.height = 0;
-    this.div.style.width = 0;
-    this.div.style.borderWidth = `0 ${this.width}px solid ${this.height}px solid ${this.height}px solid`;
-    // this.div.style.borderRightWidth = `${IsoHeightInput.value}px`;
-    this.div.style.backgroundColor = randomColor();
+    this.div.style.borderRight = `${IsoHeightInput.value / 2}px solid transparent`;
+    this.div.style.borderLeft = `${IsoHeightInput.value / 2}px solid transparent`;
+    this.div.style.borderBottom = `${IsoHeightInput.value / 2}px solid ${randomColor()}`;
+
+    this.div.classList.add("Triangle");
     this.randomNum();
-    this.div.classList.add("triangle");  
-         shapeContainer.appendChild(this.div);;
+    shapeContainer.appendChild(this.div);
+  }
+  describe() {
+    info1.innerText = "Triangle";
+    info3.innerText = `${IsoHeightInput.value / 2}px`;
+    info2.innerText = `${IsoHeightInput.value}px`;
+    info4.innerText = "NA";
+    info5.innerText = `${Math.floor(
+      `${IsoHeightInput.value}` * `${IsoHeightInput.value}`
+    )} px`;
+    info6.innerText = `${Math.floor(
+      `${IsoHeightInput.value}` * `${IsoHeightInput.value}` * 2
+    )} px`;
   }
 }
