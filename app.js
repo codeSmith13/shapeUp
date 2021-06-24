@@ -71,7 +71,7 @@ class Rectangle extends Shape {
     info3.innerText = `${rectInput1.value}px`;
     info4.innerText = "NA";
     info5.innerText =`${Math.floor( `${rectInput1.value}` * `${rectInput2.value}`)} px`;
-    info6.innerText = `${Math.floor(`${rectInput1.value}` * `${rectInput2.value}`*2)} px`;
+    info6.innerText = `${Math.floor(2*`${rectInput1.value}` + `${rectInput2.value}`*2)} px`;
   }
 }
 
@@ -89,12 +89,9 @@ class Square extends Shape {
     info3.innerText = `${sqHeightInput.value}px`;
     info2.innerText = `${sqHeightInput.value}px`;
     info4.innerText = "NA";
-    info5.innerText = `${Math.floor(
-      `${sqHeightInput.value}` * `${sqHeightInput.value}`
-    )} px`;
+    info5.innerText = `${Math.floor(`${sqHeightInput.value}` * `${sqHeightInput.value}`)} px`;
     info6.innerText = `${Math.floor(
-      `${sqHeightInput.value}` * `${sqHeightInput.value}` * 2
-    )} px`;
+      `${sqHeightInput.value}` * 4)} px`;
   }
 }
 
@@ -131,14 +128,10 @@ class Triangle extends Shape {
   }
   describe() {
     info1.innerText = "Triangle";
-    info3.innerText = `${IsoHeightInput.value / 2}px`;
     info2.innerText = `${IsoHeightInput.value}px`;
+    info3.innerText = `${IsoHeightInput.value / 2}px`;
     info4.innerText = "NA";
-    info5.innerText = `${Math.floor(
-      `${IsoHeightInput.value}` * `${IsoHeightInput.value}`
-    )} px`;
-    info6.innerText = `${Math.floor(
-      `${IsoHeightInput.value}` * `${IsoHeightInput.value}` * 2
-    )} px`;
+    info5.innerText = `${Math.floor(`${IsoHeightInput.value}` * `${IsoHeightInput.value}`)} px`;
+    info6.innerText = `${Math.floor(`${IsoHeightInput.value}` * `${IsoHeightInput.value}` * 2)} px`;
   }
 }
